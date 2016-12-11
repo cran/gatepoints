@@ -1,5 +1,6 @@
-## ---- fig.show = 'hold', fig.cap = 'Simple plot.', fig.width = 6, fig.height = 6, dev = "svg"----
+## ----simpleplot, fig.show = 'hold', fig.cap = 'Simple plot.', fig.width = 6, fig.height = 6, dev = "svg"----
 x <- data.frame(x=1:10, y=1:10, row.names = 1:10)
+## If you are using RStudio do X11() first.
 plot(x, pch = 16, col = "red")
 
 ## ---- echo=TRUE, eval = FALSE--------------------------------------------
@@ -9,7 +10,7 @@ plot(x, pch = 16, col = "red")
 ## ---- echo = FALSE, eval = TRUE------------------------------------------
 selectedPoints <- c("4", "5", "7")
 
-## ---- echo=FALSE, eval = TRUE, fig.show = 'hold', fig.cap = 'Selected points', fig.width = 6, fig.height = 6, dev = "svg"----
+## ----gatedplot, echo=FALSE, eval = TRUE, fig.show = 'hold', fig.cap = 'Selected points', fig.width = 6, fig.height = 6, dev = "svg"----
 plot(x, pch = 16, col = "red")
 x <- rbind(c(6.099191, 8.274120), 
            c(8.129107, 7.048649),

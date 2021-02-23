@@ -1,16 +1,16 @@
-## ----simpleplot, fig.show = 'hold', fig.cap = 'Simple plot.', fig.width = 6, fig.height = 6, dev = "svg"----
+## ----simpleplot, fig.show = 'hold', fig.cap = 'Simple plot.', fig.width = 6, fig.height = 6, dpi = 100----
 x <- data.frame(x=1:10, y=1:10, row.names = 1:10)
 ## If you are using RStudio do X11() first.
 plot(x, pch = 16, col = "red")
 
-## ---- echo=TRUE, eval = FALSE--------------------------------------------
+## ---- echo=TRUE, eval = FALSE-------------------------------------------------
 #  library(gatepoints)
 #  selectedPoints <- fhs(x, mark = TRUE)
 
-## ---- echo = FALSE, eval = TRUE------------------------------------------
+## ---- echo = FALSE, eval = TRUE-----------------------------------------------
 selectedPoints <- c("4", "5", "7")
 
-## ----gatedplot, echo=FALSE, eval = TRUE, fig.show = 'hold', fig.cap = 'Selected points', fig.width = 6, fig.height = 6, dev = "svg"----
+## ----gatedplot, echo=FALSE, eval = TRUE, fig.show = 'hold', fig.cap = 'Selected points', fig.width = 6, fig.height = 6, dpi = 100----
 plot(x, pch = 16, col = "red")
 x <- rbind(c(6.099191, 8.274120), 
            c(8.129107, 7.048649),
@@ -23,11 +23,11 @@ x <- rbind(c(6.099191, 8.274120),
 polygon(x[,1], x[,2])
 points(c(4,5,7), c(4,5,7))
 
-## ---- echo = FALSE, eval = TRUE------------------------------------------
+## ---- echo = FALSE, eval = TRUE-----------------------------------------------
 x <- as.data.frame(x)
 colnames(x) <- c("x", "y")
 attr(selectedPoints, "gate") <- x
 
-## ---- echo = TRUE, eval = TRUE-------------------------------------------
+## ---- echo = TRUE, eval = TRUE------------------------------------------------
 selectedPoints
 

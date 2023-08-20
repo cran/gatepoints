@@ -3,7 +3,19 @@
 \docType{package}
 \name{gatepoints}
 \alias{gatepoints}
+\alias{gatepoints-package}
 \title{gatepoints.}
 \description{
 Allows user to gate a region on a plot and returns points within it.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/wjawaid/gatepoints}
+}
+
+}
+\author{
+\strong{Maintainer}: Wajid Jawaid \email{wj241@alumni.cam.ac.uk}
+
 }
